@@ -4,25 +4,23 @@
 
     <title>Assignment 6 Giphy Api</title>
 <style type="text/css">
+   
     img {
         
-        height: 227px;
-        width: 227px; 
+        height: 250px;
+        width: 250px; 
+        margin: 5px; 
        
-         
     }
-
+  
    
 
-div {
-    display: inline; 
-}
-     
+    #images0, #images1, #images2, #images3, #images4, #images5, #images6, #images7, #images8, #images9, #images10 {
+        float: left; 
+    }
+
     .rating {
-       
-       border: 1px solid black; 
-       width: 300px; 
-      
+        margin: 5px; 
     }
     
  </style>   
@@ -107,10 +105,8 @@ for (var i=0; i<10; i++) {
      
    
      newContent += '<div class ="' + i + '">'; 
-     
      newContent += '<img src=" ' +   response.data[i].images.fixed_height_still.url  + ' " ';  // api call for the images
      newContent += 'id="' +  i + '"/>';
-      
      newContent += '</div>';
      newContent += '<div class= "rating">'  + 'Rating: '  + response.data[i].rating  + '</div>'; 
        //creates another div for the ratings
